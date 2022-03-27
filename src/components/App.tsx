@@ -1,11 +1,15 @@
 import * as React from "react";
-import { hot } from "react-hot-loader";
 import { observer } from "mobx-react-lite";
+import { PhotoCard } from "./PhotoCard";
 
 export const App = observer(() => {
-  return <h1>Hello world</h1>;
+  return (
+    <div className="app">
+      <h1>Hello World!</h1>
+      <p>Foo to the bark</p>
+      <PhotoCard />
+    </div>
+  );
 });
 
-declare let module: Record<string, unknown>;
-
-export default hot(module)(App);
+export default App;
